@@ -32,26 +32,31 @@
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
     </script>
 
-    <!-- Minimum: -->
-    <div id="fblwidget_simple"></div>
-    <script src="//bundesliga-widgets.de/js/simple.js" type="text/javascript"></script>
+<div id="fblwidget_teammatches"></div>
+<script src="//bundesliga-widgets.de/js/teammatches.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var fblWidgetSettings = {
 
-    <!-- Optional: -->
-    <script type="text/javascript">
-      var fblWidgetSettings = {
-        league: 'bl2', // bl1 oder bl2
-        // hebt in allen Widgets die Teamnamen hervor:
-        teamsToHighlight: ['Bayern', 'Hamburg'],
+    // der Lieblingsverein,
+    // das Team, dessen Spiele in das TeamMatches-Widgets geladen werden:
+    teamMatchesTeam: 'FC Kaiserslautern',
+    
+    weekCountPast: 5,  // wieviele Wochen rückwirkend sollen die Spiele angezeigt werden?
+    weekCountFuture: 3, // wieviele Wochen vorrausschauend sollen die Spiele angezeigt werden?
 
-        // generiert aus den angegebenen Teams Links zu der angegebenen Url:
-        teamLinks: [{
-          'teamname': 'Bayern',
-          'link': 'https://fcbayern.com/de'
-        }, {
-          'teamname': 'Dortmund',
-          'link': 'https://www.bvb.de/'
-        }]
-      };
-    </script>
+
+    // hebt in allen Widgets die Teamnamen hervor:
+    teamsToHighlight: ['FC Bayern München', 'Hamburg'],
+
+    // generiert aus den angegebenen Teams Links zu der angegebenen Url:
+    teamLinks: [{
+      'teamname': 'Bayern',
+      'link': 'https://fcbayern.com/de'
+    }, {
+      'teamname': 'Dortmund',
+      'link': 'https://www.bvb.de/'
+    }]
+  };
+</script>
 </body>
 </html>
